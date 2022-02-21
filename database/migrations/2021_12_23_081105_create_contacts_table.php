@@ -15,15 +15,14 @@ class CreateContactsTable extends Migration
     {
         Schema::create('contacts', function (Blueprint $table) {
             $table->id();
-            $table->string('address_az');
-            $table->string('address_en');
-            $table->string('address_ru');
-            $table->string('instagram');
-            $table->string('facebook');
-            $table->string('twitter');
-            $table->string('youtube');
-            $table->string('phone1');
-            $table->string('phone2');
+            $table->string('address_az')->nullable();
+            $table->string('address_en')->nullable();
+            $table->string('address_ru')->nullable();
+            $table->string('instagram')->nullable();
+            $table->string('facebook')->nullable();
+            $table->string('twitter')->nullable();
+            $table->string('youtube')->nullable();
+            $table->string('phone1')->nullable();
             $table->timestamps();
         });
     }
