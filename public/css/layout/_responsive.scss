@@ -1,0 +1,389 @@
+$brekpointbigScreen1299:1299px;
+
+$brekpointtabletScreen991:991px;
+
+$brekpointtabletScreen767:767px;
+
+$brekpointmobileScreen565:565px;
+@media only screen and (max-width: $brekpointbigScreen1299){
+    .contact{
+        .container-fluid{
+            padding: 10% 50px 0px 50px;
+            .row{
+                .contact_text{
+                    font-size: 60px;
+                }
+            }
+        }
+    }
+    .reservation_section{
+        .container{
+            .contact_text{
+                font-size: 50px;
+            }
+            .row{
+                .res_right{
+                    justify-content: center;
+                }
+            }
+        }
+    }
+    .home_bottom{
+        .container-fluid{
+            .row{
+                width: 100%;
+                .bottom_content{
+                    width: 100%;
+                    h1{
+                        font-size: 100px;
+                    }
+                    h2{
+                        font-size: 90px;
+                    }
+                    p{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: $brekpointtabletScreen991) {
+    .contact{
+        .container-fluid{
+            padding: 10% 50px 0px 50px;
+            .row{
+                .contact_text{
+                    font-size: 50px;
+                }
+                .contact_center{
+                    &.col-md-12{
+                      
+                        padding: 0px 100px;
+                    }
+                    flex-direction: column;
+                    .loc,.num,.mail{
+                        width: 100%;
+                        margin: 10px auto;
+                    }
+                }
+                .map{
+                    margin-top: 30px;
+                    iframe{
+                        padding: 0px;
+                    }
+                    &.col-md-12{
+                      
+                        padding: 0px 100px;
+                    }
+                }
+            }
+        }
+    }
+    .reservation_section{
+        .container{
+            .contact_text{
+                font-size: 50px;
+            }
+            .row{
+                margin-bottom: 8rem;
+                
+                .res_right{
+                    justify-content: center;
+                    #calendar {
+                        width: 470px;
+                    }
+                }
+                .res_left{
+                    align-items: center;
+                    margin-bottom: 30px;
+                    input{
+                        width: 90%;
+                    }
+                    .card_number{
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        input{
+                            width: 90%;
+                        }
+                    }
+                }
+            }
+        }
+    } 
+    header{
+        .mobileMenu{
+            display: flex;
+        }
+        .header-down{
+            .container-fluid{
+                .header_nav{
+                    justify-content: space-between;
+                    .header-left{
+                        display: none;
+                    }
+                    .header-right{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .company{
+       
+        .container {
+           max-width: 100%;
+            .row{
+                margin-top: 7rem;
+                .contact_text{
+                    font-size: 40px;
+                    margin-bottom: 30px;
+                }
+                p{
+                    margin-bottom: 30px;
+                }
+                .image{
+                    grid-template-columns: repeat(4, 1fr);
+                    img{
+                        max-width: 200px;
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+    .register{
+        .container-fluid{
+            .row{
+                h3{
+                    font-size: 7rem;
+                }
+                .res_left{
+                    input{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: $brekpointtabletScreen767){
+    .reservation_section{
+        .container{
+            .contact_text{
+                font-size: 30px;
+            }
+            .row{
+                .res_right{
+                    padding: 30px;
+                    #calendar {
+                        width: 400px;
+                    }
+                }
+            }
+        }
+    } 
+    .vs-menu-area{
+        max-width: 100%;
+    }
+    .home_bottom{
+
+        .container-fluid{
+            .row{
+                .bottom_content{
+                    width: 100%;
+                    h1,h2{
+                        font-size: 50px;
+                    }
+                    p{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        height: auto;
+        background-color: map-get($color , "footercolor" );
+        .container-fluid{
+            padding: 10px 10px 10px 10px;
+            .row{
+                .fotLeft{
+                    display: flex;
+                    justify-content: center;
+                    
+                }
+                .fotRight{
+                    display: flex;
+                    justify-content: center;
+                    padding-top: 10px;
+                    img{
+                        max-height: 30px;
+                        padding: 5px 0px 0px 0px;
+                    }
+                   
+                }
+            }
+        }
+    }
+    header{
+        &.fixed-header{
+            .header-down{
+                padding: 10px;
+            }
+        }
+    }
+    .reservation_section{
+        .container{
+            padding: 15rem 0 0 0;
+            .row{
+                .res_left {
+
+                    .card_number{
+                        width: 90%;
+                    }
+                    input{
+                        height: auto;
+                    }
+                }
+                .res_right{
+                    padding: 15px;
+                }
+            }
+        }
+    }
+    
+    .contact{
+        .container-fluid{
+            padding: 20rem 20px 0px 20px;
+            .row{
+                .contact_text{
+                    font-size: 35px;
+                }
+                .contact_center{
+                    &.col-md-12{
+                        padding: 0px 20px;
+                    }
+                    .loc,.num,.mail{
+                        height: 50px;
+                    }
+                }
+                .map{
+                    margin-bottom: 10rem;
+                    &.col-md-12{
+                        padding: 0px 20px;
+                    }
+                }
+            }
+        }
+    }
+    .company{
+       
+        .container {
+           
+            .row{
+                margin-top: 7rem;
+                .contact_text{
+                    font-size: 40px;
+                }
+                .image{
+                    grid-template-columns: repeat(2, 1fr);
+                    img{
+                        max-width: 150px;
+                    }
+                }
+            }
+        }
+    }
+    .register{
+        .container-fluid{
+            .row{
+                justify-content: center;
+                width: 100%;
+                h3{
+                    font-size: 50px;
+                    margin: 10px auto;
+                }
+                .res_left{  
+                    input,select{
+                        width: 100%;
+                    }
+                    .alert_validation{
+                        width: auto;
+                    }
+                }
+            }
+            .res_btn.col-md-4{
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    } 
+}
+@media only screen and (max-width: $brekpointmobileScreen565){
+    header  {
+        .header-down{
+            .container-fluid{
+                .header_nav{
+                    .header_logo{
+                            margin: 0;
+                    }
+                }
+            }
+        }
+    }
+    .home{
+        .container-fluid{
+            .row{
+                .home_button{
+                    button{
+                        a{
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .home_bottom{
+        .container-fluid{
+            .row{
+                .bottom_content{
+                    padding: 0px 20px;
+                    h1,h2{
+                        font-size: 28px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .company{
+        .container{
+            .row{
+                margin-top: 15rem;
+                .contact_text{
+                    font-size: 25px;
+                    padding-bottom: 20px;
+                }
+                p{
+                    width: 100%;
+                    padding: 0px 20px;
+                    font-size: 14px;
+                    padding-bottom: 20px;
+                }
+            }
+        }
+    }
+    .register{
+        .container-fluid{
+            .row{
+                h3{
+                    font-size: 30px;
+                }
+            }
+        }
+    } 
+}

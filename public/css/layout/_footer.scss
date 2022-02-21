@@ -1,0 +1,29 @@
+footer{
+    height: 70px;
+    background-color: map-get($color , "footercolor" );
+    .container-fluid{
+        padding: 20px 50px 20px 50px;
+        .row{
+            .fotLeft{
+                display: flex;
+                justify-content: left;
+                img{
+                    max-height: 30px;
+                }
+            }
+            .fotRight{
+                display: flex;
+                justify-content: right;
+                img{
+                    max-height: 30px;
+                    padding: 5px 0px 0px 0px;
+                }
+                h6{
+                    color: map-get($color , "color1" );
+                    font-size: 16px;
+                    padding: 5px 20px 0px 0px;
+                }
+            }
+        }
+    }
+}

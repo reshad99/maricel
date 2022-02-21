@@ -1,0 +1,60 @@
+.company{
+    position: relative;
+    overflow: hidden;
+    &.company-style-4{
+        min-height: 93vh;
+        padding-bottom: 0;
+        display: flex;
+        align-items: center;
+    }
+    &.bg_image--12{
+        background-image: url('../img/contact/main_bg.png');
+    }
+    &.bg_image{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    .container{
+        
+        .row{
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            .contact_text{
+                font-size: 105px;
+                color:  map-get($color , "color1" );
+                font-family: $fontTenor;
+            }
+            p{
+                color:  map-get($color , "color1" );
+                text-align: center;
+                width: 70%;
+                font-family: $fontFutura;
+                font-size: 16px;
+                line-height: 1.5;
+            }
+            .image{
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                grid-gap: 10px;
+                img{
+                    max-width: 240px;
+                    width: 100%;
+                    height: 100%;
+                    transition: all ease .4s;
+                    cursor: pointer;
+
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            .c5{
+                margin-top: 40px;
+                display: block;
+                font-size: 58px;
+            }
+        }
+    }
+}

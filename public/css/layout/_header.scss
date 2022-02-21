@@ -1,0 +1,303 @@
+
+
+@mixin display() {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+header{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    &.fixed-header{
+        background: map-get($color , "headerbg");
+        backdrop-filter: saturate(1) blur(20px)!important;
+        animation: fadeInDown 800ms;
+    }
+    &.fixed-header .header-down{
+        padding: 15px;
+    }
+    .mobileMenu{
+        display: none;
+        outline: none;
+        border: none;
+        background: transparent;
+        & .navbar-toggler{
+            outline: none;
+            border: none;
+            background: transparent;
+            &:active{
+                outline: none;
+                border: none;
+                background: transparent;
+            }
+        }
+    }
+    .container-fluid{
+        position: relative;
+    }
+   
+    & .header-down{
+        padding: 20px 0 0 0;
+        & .container-fluid{
+            max-width: 1500px;
+
+            & .header_nav{
+                @include display();
+                justify-content: center;
+              
+
+                & .header-left,
+                & .header-right{
+                    flex: 1;
+                    display: flex;
+                }
+                & .header-menu{
+                    @include display();
+                    justify-content: space-around;
+                    & > li{
+                        padding: 2rem 0rem 1rem 1rem;
+                        position: relative;
+
+                        &.nav-item a:hover::after{
+                            opacity: 0;
+                        }
+
+                        & > a{
+                            color: map-get($color,"color1");
+                            font-size: 1em;
+                            font-weight: 500;
+                            display: inline-block;
+                            position: relative;
+                            transition: none;
+
+                            &::after{
+                                content: '';
+                                position: absolute;
+                                top: 100%;
+                                left: 0;
+                                right: 0;
+                                margin-top: .5rem;
+                                height: .3em;
+                                border-bottom: .19rem solid map-get($color,"colorfd");
+                                opacity: 0;
+                                pointer-events: none;
+                                width: 0;
+                            }
+                            &:hover::after,
+                            &:active::after{
+                                opacity: 1;
+                                width: 100%;
+                                transition: ease .4s;
+                            }
+                        }
+                    }
+
+                }
+                & .header_logo{
+                    margin: 0 5rem;
+                    position: relative;
+
+                    & img{
+                        max-width: 150px;
+                    }
+                }
+                & .mobileMenu{
+                    & .navbar-toggler{
+                        height: 34px;
+                        width: 44px;
+                        cursor: pointer;
+                        border: none;
+                        background-color: transparent;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        // &.active span{
+                        //     background-color: transparent;
+                        //     transition: background-color .5s ease;
+                        //     &::before{
+                        //         transform: rotate(45deg);
+                        //         transition: transform .5s ease;
+                        //     }
+                        //     &::after{
+                        //         transform: rotate(-45deg);
+                        //         transition: transform .5s ease;
+                        //     }
+                        // }
+                        & span{
+                            height: 2px;
+                            width: 30px;
+                            display: block;
+                            background-color: map-get($color,"colorfd");
+                            position: relative;
+                            &::before,
+                            &::after{
+                                content: '';
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                height: 100%;
+                                width: 100%;
+                                background-color: map-get($color,"colorfd");
+                            }
+                            &::before{
+                                transform: translateY(-8px);
+                            }
+                            &::after{
+                                transform: translateY(8px);
+                            }
+                        }
+                    }
+                }
+            }
+            & .header-right-side{
+                &.non{
+                    visibility: hidden;
+                    height: 0;
+                    opacity: 0;
+                }
+                & .header-menu{
+                    & nav{
+                        & ul{
+                            display: flex;
+                            margin: 0;
+                            padding: 0;
+                            & li{
+                                height: 80px;
+                                position: relative;
+                                list-style-type: none;
+                                display: flex;
+                                justify-content: center;
+                                & a{
+                                    white-space: nowrap;
+                                    height: 100%;
+                                    width: 100%;
+                                    padding: 0 20px;
+                                    line-height: 82px;
+                                    color: map-get($color,"color4e");
+                                    font-size: 15px;
+                                    -webkit-transition: 0.3s ease-in-out;
+                                    transition: 0.3s ease-in-out;
+                                }
+                                & ul{
+                                    padding: 10px;
+                                    pointer-events: none;
+                                    background-color: map-get($color,"color1");
+                                    transform: scale(0.5);
+                                    opacity: 0;
+                                    height: auto;
+                                    top: 83px;
+                                    left: -10px;
+                                    border-radius: 5px;
+                                    min-width: 130px;
+                                    position: absolute;
+                                    z-index: 9;
+                                    display: flex;
+                                    flex-direction: column;
+                                    transition: 0.3s ease-in-out;
+                                
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            
+        }
+    }
+}
+.vs-menu-wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 999999;
+    width: 0;
+    height: 100%;
+    transition: all ease 0.8s;
+    &.vs-body-visible{
+        opacity: 1;
+        visibility: visible;
+        width: 100%;
+        transition: all ease 0.8s;
+        .vs-menu-area{
+            left: 0;
+            opacity: 1;
+            visibility: visible;
+            transition: all ease 1s;
+            .menu-items{
+                display: none;
+                background: map-get($color , "footercolor" );
+                display: flex;
+                flex-direction: column;
+                margin-left: -40px;
+                padding-left: 50px;
+            }
+        }
+    }
+    .vs-menu-area{
+        width: 100%;
+        max-width: 300px;
+        background-color: map-get($color , "footercolor" );
+        height: 100%;
+        position: relative;
+        left: -1000px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all ease 1s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .vs-menu-toggle {
+        background-color: transparent;
+        border: none;
+        font-size: 22px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        border: none;
+        outline: none;
+        padding: 0;
+        line-height: 1;
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        font-size: 24px;
+        z-index: 1;
+        .fas{
+            color: map-get($color , "color1" )
+        }
+    }
+    .vs-mobile-menu{
+        text-align: center;
+        display: block;
+        color: map-get($color , "color1" );
+        font-weight: 600;
+        font-size: 20px;
+       
+        padding: 0.5rem 1rem;
+        transition:all .3s;
+        margin-bottom: 40px;
+        &:hover{
+            color:map-get($color , "preloaderb2" );
+            letter-spacing: 3px;
+        }
+        .vs-active i{
+            border: none;
+            outline: none;
+            cursor: pointer;
+            &:hover,
+            &:focus{
+                color: red;
+                transition: all .3s;
+                border-radius: 50%;
+            }
+        }
+    }
+}

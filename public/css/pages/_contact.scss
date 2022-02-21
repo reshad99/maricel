@@ -1,0 +1,63 @@
+.contact{
+    position: relative;
+    overflow: hidden;
+    &.contact-style-4{
+        height: 100vh;
+        padding-bottom: 0;
+        display: flex;
+        align-items: center;
+    }
+    &.bg_image--12{
+        background-image: url('../img/contact/main_bg.png');
+    }
+    &.bg_image{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    .container-fluid{
+        padding: 0px 180px 0px 180px;
+        .row{
+            justify-content: center;
+
+            .contact_text{
+                font-size: 105px;
+                color:  map-get($color , "color1" );
+                font-family: $fontTenor;
+            }
+            .contact_center{
+                display: flex;
+                justify-content: center;
+               
+                .loc,.num,.mail{
+                    background: map-get($color , "colorbtn" );
+                    display: inline-block;
+                    width: 34.337%;
+                    height: 58.54px;
+                    margin: 20px;
+                    padding: 20px;
+                    border-radius: 7px;
+                    text-align: center;
+                    font-family: $fontFutura;
+                    
+                    color:  map-get($color , "color1" );
+                    a{
+                        color:  map-get($color , "color1" );
+                        transition: all ease-out .4s;
+                        font-family: $fontFutura;
+                        &:hover{
+                            color:  map-get($color , "preloaderb3" );
+                        }
+                    }
+                }
+            }
+            .map{
+                iframe{
+                    padding: 20px;
+                    width: 100%;
+                    height: 336px;
+                }
+            }
+        }
+    }
+}

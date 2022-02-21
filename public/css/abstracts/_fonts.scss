@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+
+@font-face {
+    font-family: 'Futura New';
+    src: local('Futura New'), local('Futura-New'),
+        url('../../font/FuturaNew.woff2') format('woff2'),
+        url('../../font/FuturaNew.woff') format('woff'),
+        url('../../font/FuturaNew.ttf') format('truetype');
+    font-style: normal;
+}
+$fontFutura :'Futura New';
+$fontTenor :'Tenor Sans';
+
+$color :(
+    "color1" :#fff,
+    "color2" :#edeef1,
+    "colorcc":#ccc,
+    "headerbg" : rgba(56,58,78,.6),
+    "color111":#111,
+    "color00" :#000,
+    "colorfd" :#02A9FD,
+    "colorf4" :#f4f4f4,
+    "color4e" :#383A4E,
+    "colorbtn":rgba(255, 255, 255, 0.31),
+    "coloRegister":rgba(255, 255, 255, 0.2),
+    "footercolor":#0D3F5C,
+    "colorc1":#C1C1C1,
+    "preloaderbg":#0D3F5C,
+    "preloaderb2":#72b817,
+    "preloaderb3":#dbbe18,
+    "preloaderb4":#e95a5a,
+    
+    "indicator1":#0f0,
+    "indicator2":#f00,
+);
