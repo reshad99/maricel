@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" >
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,7 +20,7 @@
 </head>
 <body>
 
-<!--PRELOADE========================-->   
+<!--PRELOADE========================-->
 <div class="preloader">
     <div class="loader">
         <div class="holder">
@@ -34,7 +34,7 @@
         </div>
     </div>
 </div>
-<!--PRELOADE========================-->   
+<!--PRELOADE========================-->
 <!--HEADER SECTION========================-->
 <header class="header tw-head">
     <div class="header-down ">
@@ -67,7 +67,7 @@
 <div class="vs-menu-wrapper position-re">
     <div class="vs-menu-area">
         <button class="vs-menu-toggle text-theme vs-active"><i class="fas fa-times-circle"></i></button>
-        
+
         <div class="linec top left"></div>
         <ul class="menu-items">
             <li class="nav-item"><a class="nav-link vs-mobile-menu active" href="/">Ana Səhifə</a></li>
