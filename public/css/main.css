@@ -20,7 +20,10 @@
 /* Reset Browsers
 -------------------------------------------------------------- */
 @import url("https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap");
-html,
+html {
+  overflow: hidden;
+}
+
 body,
 div,
 span,
@@ -1824,6 +1827,37 @@ header .header-down .container-fluid .header-right-side .header-menu nav ul li u
 
 .reservation_section .container .row .res_right #calendar .calendar--days span.start.end:after {
   display: none;
+}
+
+.reservation_section .container .res_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.reservation_section .container .res_btn button {
+  background-color: rgba(255, 255, 255, 0.31);
+  padding: 10px 30px 10px 30px;
+  margin-top: 2em;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  -webkit-transition: all ease .4s;
+  transition: all ease .4s;
+}
+
+.reservation_section .container .res_btn button:hover {
+  background-color: rgba(255, 255, 255, 0.11);
+}
+
+.reservation_section .container .res_btn button a {
+  color: #fff;
+  font-size: 24px;
+  text-transform: uppercase;
 }
 
 .visa {

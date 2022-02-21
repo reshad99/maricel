@@ -14,7 +14,7 @@ class AboutFactory extends Factory
     public function definition()
     {
         return [
-            'about_az' => '',
+            'name_az' => '',
         ];
     }
 }

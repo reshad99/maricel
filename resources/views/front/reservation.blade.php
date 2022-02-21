@@ -15,22 +15,23 @@
                 <input type="text" placeholder="Nömrəniz" name="phone">
                 <input type="text" placeholder="E-mail" name="email">
                 <div class="card_number" id="card-container">
-                    <input type="tel" class="input" name="card_number" id="card" placeholder="Kart nömrəsi"> 
+                    <input type="tel" class="input" name="card_number" id="card" placeholder="Kart nömrəsi">
                     <div id="logo"></div>
-                </div> 
+                </div>
                 <input type="text" id="datepicker" name="date" placeholder="Tarix" autocomplete="off"> <br>
-                <span class="alert alert-danger error-text alert_validation" style="display: none"></span>         
+                <span class="alert alert-danger error-text alert_validation" style="display: none"></span>
             </div>
 
             <div class="res_right col-lg-6 col-md-12 wow animate__animated animate__fadeInRight animate__delay-40ms  animate__fast" style="display: none">
                 <div id="calendar"></div>
             </div>
+
+            </div>
             <div class="res_btn">
                 <button class="wow animate__animated animate__fadeInUp animate__slow submit_reserve" type="submit"><a>GÖNDƏR</a></button>
             </form>
-            </div>
         </div>
-        
+
     </div>
 </section>
 <!--RESERVATION SECTION========================-->
