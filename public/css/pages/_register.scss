@@ -2,7 +2,7 @@
     position: relative;
     overflow: hidden;
     &.register-style-4{
-        height: 100vh;
+        height: 93vh;
         padding-bottom: 0;
         display: flex;
         align-items: center;
@@ -21,7 +21,7 @@
             width: 50%;
             padding-left: 5%;
             h3{
-                font-size: 90px;
+                font-size: 60px;
                 font-family: $fontTenor;
                 color: map-get($color , "color1" );
                 text-transform: uppercase;
@@ -31,12 +31,13 @@
             .res_left{
                 display: flex;
                 flex-direction: column;
+                padding-left: 0px;
                 .alert_validation{
                     width: 471px;
                 }
                 input,select{
                     width: 471.9px;
-                    height: 58.54px;
+                    height: 48.54px;
                     border-radius: 7px;
                     padding: 10px;
                     margin-bottom: 30px;
@@ -90,7 +91,7 @@
                     padding-bottom: 30px;
                 }
             }
-            
+
         }
         .res_btn{
             display: flex;

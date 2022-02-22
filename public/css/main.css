@@ -1206,7 +1206,7 @@ header .header-down .container-fluid .header-right-side .header-menu nav ul li u
 }
 
 .contact.contact-style-4 {
-  height: 100vh;
+  height: 93vh;
   padding-bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1237,7 +1237,7 @@ header .header-down .container-fluid .header-right-side .header-menu nav ul li u
 }
 
 .contact .container-fluid .row .contact_text {
-  font-size: 105px;
+  font-size: 75px;
   color: #fff;
   font-family: "Tenor Sans";
 }
@@ -1369,7 +1369,7 @@ header .header-down .container-fluid .header-right-side .header-menu nav ul li u
 }
 
 .register.register-style-4 {
-  height: 100vh;
+  height: 93vh;
   padding-bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1398,7 +1398,7 @@ header .header-down .container-fluid .header-right-side .header-menu nav ul li u
 }
 
 .register .container-fluid .row h3 {
-  font-size: 90px;
+  font-size: 60px;
   font-family: "Tenor Sans";
   color: #fff;
   text-transform: uppercase;
@@ -1414,6 +1414,7 @@ header .header-down .container-fluid .header-right-side .header-menu nav ul li u
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-left: 0px;
 }
 
 .register .container-fluid .row .res_left .alert_validation {
@@ -1422,7 +1423,7 @@ header .header-down .container-fluid .header-right-side .header-menu nav ul li u
 
 .register .container-fluid .row .res_left input, .register .container-fluid .row .res_left select {
   width: 471.9px;
-  height: 58.54px;
+  height: 48.54px;
   border-radius: 7px;
   padding: 10px;
   margin-bottom: 30px;
@@ -1542,7 +1543,7 @@ header .header-down .container-fluid .header-right-side .header-menu nav ul li u
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: calc(100vh - 5.3rem);
+  min-height: calc(100vh - 7rem);
   position: relative;
 }
 

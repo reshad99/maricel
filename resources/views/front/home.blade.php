@@ -1,7 +1,7 @@
 @extends('front.layouts.master')
 
 @section('content')
-    
+
 
 <!--HEADER SECTION========================-->
 <!--HOME SECTION========================-->
@@ -24,7 +24,7 @@
 
                 </ul>
             </div>
-            
+
         </div>
     </div>
 </section>
@@ -47,9 +47,9 @@
                 <h2 class="wow animate__animated animate__fadeInLeft  animate__slower">{{$about->name_2_ru}}</h2>
                 <p class="wow animate__animated animate__fadeInUp  animate__slow">{!!$about->text_ru!!}</p>
                 @endif
-                
+
             </div>
-            
+
         </div>
     </div>
 </section>

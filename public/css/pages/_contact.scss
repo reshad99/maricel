@@ -2,7 +2,7 @@
     position: relative;
     overflow: hidden;
     &.contact-style-4{
-        height: 100vh;
+        height: 93vh;
         padding-bottom: 0;
         display: flex;
         align-items: center;
@@ -21,14 +21,14 @@
             justify-content: center;
 
             .contact_text{
-                font-size: 105px;
+                font-size: 75px;
                 color:  map-get($color , "color1" );
                 font-family: $fontTenor;
             }
             .contact_center{
                 display: flex;
                 justify-content: center;
-               
+
                 .loc,.num,.mail{
                     background: map-get($color , "colorbtn" );
                     display: inline-block;
@@ -39,7 +39,7 @@
                     border-radius: 7px;
                     text-align: center;
                     font-family: $fontFutura;
-                    
+
                     color:  map-get($color , "color1" );
                     a{
                         color:  map-get($color , "color1" );
