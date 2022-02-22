@@ -23,8 +23,8 @@
                         @elseif (app()->getLocale() == 'ru')
                         <option value="{{$c->id}}">{{$c->name_ru}}</option>
                         @elseif (app()->getLocale() == 'en')
-                        <option value="{{$c->id}}">{{$c->name_en}}</option>                            
-                        @endif       
+                        <option value="{{$c->id}}">{{$c->name_en}}</option>
+                        @endif
                         @endforeach
                     </select><br>
                     <span class="alert alert-danger error-text alert_validation" style="display: none"></span>

@@ -14,11 +14,20 @@
                 <input type="text" placeholder="Ad, Soyad" name="name">
                 <input type="text" placeholder="Nömrəniz" name="phone">
                 <input type="text" placeholder="E-mail" name="email">
+
                 <div class="card_number" id="card-container">
                     <input type="tel" class="input" name="card_number" id="card" placeholder="Kart nömrəsi">
                     <div id="logo"></div>
                 </div>
+                <select name="card_id">
+                    <option value="">Kart növü</option>
+                    <option value="100Azn">100Azn</option>
+                    <option value="180azn">180Azn</option>
+                    <option value="250Azn">250Azn</option>
+                    <option value="300Azn">300Azn</option>
+                </select>
                 <input type="text" id="datepicker" name="date" placeholder="Tarix" autocomplete="off"> <br>
+
                 <span class="alert alert-danger error-text alert_validation" style="display: none"></span>
             </div>
 
