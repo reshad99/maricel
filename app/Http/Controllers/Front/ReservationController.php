@@ -28,7 +28,7 @@ class ReservationController extends Controller
                         'phone' => 'required|unique:reservations,phone',
                         'email' => 'required|email|unique:reservations,email',
                         'card_number' => 'required|max:8',
-                        'card_id' => 'required|integer',
+                        'card_id' => 'required|numeric|min:1|max:4',
                         'date' => 'required|date',
                     ];
 

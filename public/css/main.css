@@ -2240,4 +2240,8 @@ footer .container-fluid .row .fotRight h6 {
     font-size: 30px;
   }
 }
+
+#datepicker{
+    display: none;
+}
 /*# sourceMappingURL=main.css.map */

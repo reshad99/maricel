@@ -11,7 +11,8 @@ $(function() {
         headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
         dataType: 'json',
         success: function(data){
-             unavailableDates = data;
+            $('#datepicker').fadeIn()
+            unavailableDates = data;
         }
     })
     })

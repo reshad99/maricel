@@ -13,6 +13,7 @@ return [
     'phone' => 'Telefon',
     'send' => 'Göndər',
     'date' => 'Tarix',
+    'rights' => 'Bütün hüquqlar qorunur',
 
     'name' => 'Ad',
     'surname' => 'Soyad',
