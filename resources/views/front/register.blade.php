@@ -7,7 +7,7 @@
     <div class="container-fluid">
         <div class="row">
             <h3 >{{ __('nav.registration') }}</h3>
-            <div class="res_left col-md-12">
+            <div class="res_left col-lg-6 col-md-12">
                 <form id="register_form" class="form_report" action="javascript:void(0)" method="POST">
                     <input type="text" placeholder="{{ __('home.name') }}, {{ __('home.surname') }}" name="name">
                     <input type="text" placeholder="{{ __('home.phone') }}" name="phone">

@@ -1393,8 +1393,12 @@ header .header-down .container-fluid .header-right-side .header-menu nav ul li u
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  width: 50%;
+  width: 100%;
   padding-left: 5%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .register .container-fluid .row h3 {
@@ -1403,7 +1407,6 @@ header .header-down .container-fluid .header-right-side .header-menu nav ul li u
   color: #fff;
   text-transform: uppercase;
   padding-bottom: 4%;
-  text-align: center;
 }
 
 .register .container-fluid .row .res_left {
@@ -1415,6 +1418,7 @@ header .header-down .container-fluid .header-right-side .header-menu nav ul li u
       -ms-flex-direction: column;
           flex-direction: column;
   padding-left: 0px;
+  padding-right: 0px;
 }
 
 .register .container-fluid .row .res_left .alert_validation {
@@ -1422,7 +1426,7 @@ header .header-down .container-fluid .header-right-side .header-menu nav ul li u
 }
 
 .register .container-fluid .row .res_left input, .register .container-fluid .row .res_left select {
-  width: 471.9px;
+  width: 60%;
   height: 48.54px;
   border-radius: 7px;
   padding: 10px;
@@ -1671,7 +1675,6 @@ header .header-down .container-fluid .header-right-side .header-menu nav ul li u
 
 .reservation_section .container .row .res_left .card_number {
   position: relative;
-  width: 100%;
 }
 
 .reservation_section .container .row .res_left .card_number #logo {
@@ -1680,10 +1683,6 @@ header .header-down .container-fluid .header-right-side .header-menu nav ul li u
   position: absolute;
   top: 15px;
   right: 7px;
-}
-
-.reservation_section .container .row .res_left .card_number .input {
-  width: 100%;
 }
 
 .reservation_section .container .row .res_right {
@@ -1879,6 +1878,12 @@ header .header-down .container-fluid .header-right-side .header-menu nav ul li u
   background: url("/img/company/100azn-45-2.png") no-repeat;
 }
 
+#ui-datepicker-div {
+  border-radius: 7px;
+  width: 400px;
+  border-radius: 7px;
+}
+
 footer {
   height: 70px;
   background-color: #0D3F5C;
@@ -1951,6 +1956,9 @@ footer .container-fluid .row .fotRight h6 {
   .home_bottom .container-fluid .row .bottom_content p {
     width: 100%;
   }
+  .register .container-fluid .row .res_left input, .register .container-fluid .row .res_left select {
+    width: 80%;
+  }
 }
 
 @media only screen and (max-width: 991px) {
@@ -2010,11 +2018,8 @@ footer .container-fluid .row .fotRight h6 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
-  .reservation_section .container .row .res_left .card_number input {
+  .reservation_section .container .row .res_left select {
     width: 90%;
   }
   header .mobileMenu {
@@ -2058,8 +2063,8 @@ footer .container-fluid .row .fotRight h6 {
   .register .container-fluid .row h3 {
     font-size: 7rem;
   }
-  .register .container-fluid .row .res_left input {
-    width: 100%;
+  .register .container-fluid .row .res_left input, .register .container-fluid .row .res_left select {
+    width: 60%;
   }
 }
 
@@ -2072,6 +2077,27 @@ footer .container-fluid .row .fotRight h6 {
   }
   .reservation_section .container .row .res_right #calendar {
     width: 400px;
+  }
+  .reservation_section .container .row .res_left .card_number {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .reservation_section .container .row .res_left #reserve_form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .vs-menu-area {
     max-width: 100%;
@@ -2119,9 +2145,6 @@ footer .container-fluid .row .fotRight h6 {
   .reservation_section .container {
     padding: 15rem 0 0 0;
   }
-  .reservation_section .container .row .res_left .card_number {
-    width: 90%;
-  }
   .reservation_section .container .row .res_left input {
     height: auto;
   }
@@ -2164,6 +2187,7 @@ footer .container-fluid .row .fotRight h6 {
         -ms-flex-pack: center;
             justify-content: center;
     width: 100%;
+    padding: 0px 100px 0px 100px;
   }
   .register .container-fluid .row h3 {
     font-size: 50px;
@@ -2207,6 +2231,10 @@ footer .container-fluid .row .fotRight h6 {
     padding: 0px 20px;
     font-size: 14px;
     padding-bottom: 20px;
+  }
+  .register .container-fluid .row {
+    padding: 0px 10px 0px 10px;
+    margin: auto;
   }
   .register .container-fluid .row h3 {
     font-size: 30px;

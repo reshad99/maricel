@@ -47,6 +47,17 @@ $brekpointmobileScreen565:565px;
             }
         }
     }
+    .register{
+        .container-fluid{
+            .row{
+                .res_left{
+                    input,select{
+                        width: 80%;
+                    }
+                }
+            }
+        }
+    }
 }
 @media only screen and (max-width: $brekpointtabletScreen991) {
     .contact{
@@ -58,7 +69,7 @@ $brekpointmobileScreen565:565px;
                 }
                 .contact_center{
                     &.col-md-12{
-                      
+
                         padding: 0px 100px;
                     }
                     flex-direction: column;
@@ -73,7 +84,7 @@ $brekpointmobileScreen565:565px;
                         padding: 0px;
                     }
                     &.col-md-12{
-                      
+
                         padding: 0px 100px;
                     }
                 }
@@ -87,7 +98,7 @@ $brekpointmobileScreen565:565px;
             }
             .row{
                 margin-bottom: 8rem;
-                
+
                 .res_right{
                     justify-content: center;
                     #calendar {
@@ -103,15 +114,14 @@ $brekpointmobileScreen565:565px;
                     .card_number{
                         width: 100%;
                         display: flex;
-                        justify-content: center;
-                        input{
-                            width: 90%;
-                        }
+                    }
+                    select{
+                        width: 90%;
                     }
                 }
             }
         }
-    } 
+    }
     header{
         .mobileMenu{
             display: flex;
@@ -131,7 +141,7 @@ $brekpointmobileScreen565:565px;
         }
     }
     .company{
-       
+
         .container {
            max-width: 100%;
             .row{
@@ -161,8 +171,8 @@ $brekpointmobileScreen565:565px;
                     font-size: 7rem;
                 }
                 .res_left{
-                    input{
-                        width: 100%;
+                    input,select{
+                        width: 60%;
                     }
                 }
             }
@@ -176,15 +186,29 @@ $brekpointmobileScreen565:565px;
                 font-size: 30px;
             }
             .row{
+
                 .res_right{
                     padding: 30px;
                     #calendar {
                         width: 400px;
                     }
                 }
+                .res_left{
+                    .card_number{
+                        justify-content: center;
+                    }
+                    #reserve_form{
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+
             }
         }
-    } 
+    }
     .vs-menu-area{
         max-width: 100%;
     }
@@ -213,7 +237,7 @@ $brekpointmobileScreen565:565px;
                 .fotLeft{
                     display: flex;
                     justify-content: center;
-                    
+
                 }
                 .fotRight{
                     display: flex;
@@ -223,7 +247,7 @@ $brekpointmobileScreen565:565px;
                         max-height: 30px;
                         padding: 5px 0px 0px 0px;
                     }
-                   
+
                 }
             }
         }
@@ -241,9 +265,7 @@ $brekpointmobileScreen565:565px;
             .row{
                 .res_left {
 
-                    .card_number{
-                        width: 90%;
-                    }
+
                     input{
                         height: auto;
                     }
@@ -254,7 +276,7 @@ $brekpointmobileScreen565:565px;
             }
         }
     }
-    
+
     .contact{
         .container-fluid{
             padding: 20rem 20px 0px 20px;
@@ -280,9 +302,9 @@ $brekpointmobileScreen565:565px;
         }
     }
     .company{
-       
+
         .container {
-           
+
             .row{
                 margin-top: 7rem;
                 .contact_text{
@@ -302,11 +324,12 @@ $brekpointmobileScreen565:565px;
             .row{
                 justify-content: center;
                 width: 100%;
+                padding: 0px 100px 0px 100px;
                 h3{
                     font-size: 50px;
                     margin: 10px auto;
                 }
-                .res_left{  
+                .res_left{
                     input,select{
                         width: 100%;
                     }
@@ -320,7 +343,7 @@ $brekpointmobileScreen565:565px;
                 max-width: 100%;
             }
         }
-    } 
+    }
 }
 @media only screen and (max-width: $brekpointmobileScreen565){
     header  {
@@ -380,10 +403,12 @@ $brekpointmobileScreen565:565px;
     .register{
         .container-fluid{
             .row{
+                padding: 0px 10px 0px 10px;
+                margin: auto;
                 h3{
                     font-size: 30px;
                 }
             }
         }
-    } 
+    }
 }

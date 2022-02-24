@@ -18,25 +18,27 @@
     .container-fluid{
         .row{
             justify-content: flex-start;
-            width: 50%;
+            width: 100%;
             padding-left: 5%;
+            flex-direction: column;
             h3{
                 font-size: 60px;
                 font-family: $fontTenor;
                 color: map-get($color , "color1" );
                 text-transform: uppercase;
                 padding-bottom: 4%;
-                text-align: center;
+
             }
             .res_left{
                 display: flex;
                 flex-direction: column;
                 padding-left: 0px;
+                padding-right: 0px;
                 .alert_validation{
                     width: 471px;
                 }
                 input,select{
-                    width: 471.9px;
+                    width: 60%;
                     height: 48.54px;
                     border-radius: 7px;
                     padding: 10px;

@@ -85,17 +85,13 @@ $radius: 5px;
                 // }
                 .card_number{
                   position: relative;
-                  width: 100%;
+
                   #logo{
                     width: 46px;
                     height: 30px;
                     position: absolute;
                     top: 15px;
                     right: 7px;
-                  }
-                  .input{
-                    // margin-bottom: 0px;
-                    width: 100%;
                   }
 
                 }
@@ -272,4 +268,10 @@ $radius: 5px;
 .visa {
   background: url("/img/company/100azn-45-2.png")
      no-repeat;
+}
+#ui-datepicker-div
+{
+    border-radius: 7px;
+    width: 400px;
+    border-radius: 7px;
 }
