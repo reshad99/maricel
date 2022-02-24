@@ -87,6 +87,7 @@ $(function() {
                 alertify.alert(data.message).set({title: 'Qeydiyyat uğurla tamamlandı!'});
                 $('.error-text').css('display', 'none')
                 $('#reserve_form').trigger('reset')
+                $('#datepicker').fadeOut()
             },
             error: function(data){
                 console.log(data)

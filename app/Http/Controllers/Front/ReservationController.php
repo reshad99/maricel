@@ -6,9 +6,11 @@ use DateTime;
 use Validator, DB;
 use App\Models\Card;
 use App\Models\Register;
+use App\Mail\ReserveMail;
 use App\Models\Reservation;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Mail;
 
 class ReservationController extends Controller
 {
@@ -57,6 +59,10 @@ class ReservationController extends Controller
                             $reserve->date        = $date;
                             $reserve->save();
 
+                            $card_name = $reserve->card->name_az;
+
+                            Mail::to('hello@maricel.az')->send(new ReserveMail($name, $email, $phone, $card_number, $card_name));
+
                             return response()->json(['message' => 'Sorğunuz qəbul olundu. Təsdiq mesajı qısa müddət ərzində email-inizə göndəriləcək.'], 200);
                         }
                         else
@@ -81,19 +87,19 @@ class ReservationController extends Controller
         $earlier = new DateTime();
         $later = new DateTime("2022-06-02");
         $pos_diff = $earlier->diff($later)->format("%r%a");
-        $possible_count = 1;
+        $possible_count = '';
 
         if ($card_id == 1) {
-            $possible_count == 19;
+            $possible_count = 19;
         }
         elseif ($card_id == 2) {
-            $possible_count == 6;
+            $possible_count = 6;
         }
         elseif ($card_id == 3) {
-            $possible_count == 4;
+            $possible_count = 4;
         }
         elseif ($card_id == 4) {
-            $possible_count == 5;
+            $possible_count = 5;
         }
 
         for ($i=0; $i < $pos_diff; $i++) {

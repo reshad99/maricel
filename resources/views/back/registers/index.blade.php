@@ -1,6 +1,6 @@
 @extends('back.layouts.master')
 
-@section('title', 'Əlaqə')
+@section('title', 'Qeydiyyatdan keçənlər')
 @section('content')
 
 <div class="container-fluid">
@@ -36,7 +36,7 @@
                   </button>
                 <button class="btn btn-danger delete" data-id="{{$r->id}}">
                   <i class="fa fa-fw fa-trash"></i></button></td>
-                </tr> 
+                </tr>
                 @endforeach
               </tbody>
             </table>
@@ -55,7 +55,7 @@
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  
+
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -80,7 +80,7 @@
     </div>
   </div>
 </div>
-    
+
 @endsection
 
 
@@ -129,7 +129,7 @@
 
     $(document).on('click', '.delete', function(){
         id = $(this).data('id');
-        alertify.confirm("Silmək istədiyinizə əminsiniz?", 
+        alertify.confirm("Silmək istədiyinizə əminsiniz?",
         function(){
           $.ajax({
             url: '/admin/register/delete',

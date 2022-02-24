@@ -16,6 +16,6 @@ class Reservation extends Model
 
     public function card()
     {
-        return $this->hasOne(Card::class, 'card_id');
+        return $this->hasOne(Card::class, 'id', 'card_id');
     }
 }

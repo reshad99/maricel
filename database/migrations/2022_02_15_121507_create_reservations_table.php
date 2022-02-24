@@ -21,7 +21,7 @@ class CreateReservationsTable extends Migration
             $table->string('card_number', 10)->nullable();
             $table->integer('card_id');
             $table->date('date');
-            $table->tinyInteger('confirm')->value(0);
+            $table->tinyInteger('confirm')->default(0);
             $table->timestamps();
         });
     }
