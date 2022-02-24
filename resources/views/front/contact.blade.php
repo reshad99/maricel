@@ -15,7 +15,7 @@
                 @elseif (app()->getLocale() == 'ru')
                 <h3 class="loc">{{$contact->address_ru}}</h3>
                 @endif
-                <h3 class="num" ><a href="tel:+994512016702">{{$contact->phone1}}</a></h3>
+                <h3 class="num" ><a href="tel:{{$contact->phone1}}">{{$contact->phone1}}</a></h3>
                 <h3 class="mail"><a href="mailto:info@maricel.az">{{$contact->email}}</a></h3>
             </div>
             <div class="map col-md-12">
