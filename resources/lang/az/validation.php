@@ -109,9 +109,10 @@ return [
     'name' => 'Ad',
     'surname' => 'Soyad',
     'email' => 'Email',
-    'phone' => 'nömrə',
+    'phone' => 'Nömrə',
     'message' => 'Mesaj',
     'card_id' => 'Kart Növü',
+    'card_number' => 'Kart Nömrəsi',
   ],
 
 ];

@@ -42,8 +42,8 @@
             <nav class="header_nav">
                 <div class="header-left">
                     <ul class="header-menu">
-                        <li><a href="/about">Haqqımızda</a></li>
-                        <li><a href="/campaign">Kampaniya</a></li>
+                        <li><a href="/about">{{ __('nav.about') }}</a></li>
+                        <li><a href="/campaign">{{ __('nav.campaign') }}</a></li>
                     </ul>
                 </div>
                 <a href="/" class="header_logo">
@@ -51,8 +51,8 @@
                 </a>
                 <div class="header-right">
                     <ul class="header-menu">
-                        <li><a href="/register">Qeydiyyat</a></li>
-                        <li><a href="/contact">Əlaqə</a></li>
+                        <li><a href="/register">{{ __('nav.registration') }}</a></li>
+                        <li><a href="/contact">{{ __('nav.contact') }}</a></li>
                     </ul>
                 </div>
                 <div class="mobileMenu">

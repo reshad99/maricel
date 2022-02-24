@@ -9,8 +9,13 @@ class Reservation extends Model
 {
     use HasFactory;
 
-    public function card()
+    public function card_check()
     {
         return $this->hasOne(Register::class, 'card_number', 'card_number');
+    }
+
+    public function card()
+    {
+        return $this->hasOne(Card::class, 'card_id');
     }
 }

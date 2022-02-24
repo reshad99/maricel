@@ -32,19 +32,19 @@
                   <td>{{$r->phone}}</td>
                   <td>{{$r->card_number}}</td>
                   <td>
-                    @if (isset($r->card->card->name_az))
-                    {{$r->card->card->name_az}}
+                    @if (!isset($r->card_check->card->name_az))
+                    <div class="alert alert-danger">Müştərinin daxil etdiyi nömrə sizin verdiyiniz nömrə ilə eyni deyil</div>
                     @else
-                    <div class="alert alert-danger">Müştərinin daxil etdiyi nömrə sizin verdiyiniz nömrə ilə eyni deyil</div> 
+                    {{ $r->card->name_az }}
                     @endif
-                    
+
                   </td>
                   <td>{{$r->date}}</td>
                   <td id="id-{{$r->id}}">@if ($r->confirm == 0)
                     <button type="button" data-id="{{$r->id}}" data-num="1" class="btn btn-success check">
                       <i class="fa fa-fw fa-check"></i>
                     </button>
-                    @else 
+                    @else
                     <button type="button" data-id="{{$r->id}}" data-num="0" class="btn btn-danger check">
                       <i class="fa fa-fw fa-close"></i>
                     </button>
@@ -53,7 +53,7 @@
                     <i class="fa fa-fw fa-trash"></i>
                   </button>
                     </td>
-                </tr> 
+                </tr>
                 @endforeach
               </tbody>
             </table>
@@ -69,7 +69,7 @@
 
   <!-- Button trigger modal -->
 
-    
+
 @endsection
 
 
@@ -110,7 +110,7 @@
       num = $(this).data('num');
       id = $(this).data('id');
 
-      if (num == 1) 
+      if (num == 1)
       {
         message = "Rezervi təsdiq etmək istədiyinizə əminsiniz?";
       }
@@ -148,7 +148,7 @@
                     <i class="fa fa-fw fa-trash"></i>
                   </button>`);
           }
-          
+
         },
         error: function(data)
         {
@@ -162,17 +162,17 @@
         alertify.error('Əməliyyat ləğv edildi');
       }).set({title:"Təsdiq"}).set({labels:{ok:'Bəli', cancel: 'Xeyr'}});
 
-      
 
-      
 
-      
+
+
+
     })
   });
 
   $(document).on('click', '.delete', function(){
         id = $(this).data('id');
-        alertify.confirm("Silmək istədiyinizə əminsiniz?", 
+        alertify.confirm("Silmək istədiyinizə əminsiniz?",
         function(){
           $.ajax({
             url: '/admin/reserve/delete',

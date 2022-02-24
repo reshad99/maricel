@@ -12,6 +12,7 @@ return [
     'address' => 'Address',
     'phone' => 'Phone',
     'send' => 'Send',
+    'date' => 'Date',
 
     'name' => 'Name',
     'surname' => 'Surname',

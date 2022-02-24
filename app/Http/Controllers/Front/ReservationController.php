@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers\Front;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use App\Models\Reservation;
-use App\Models\Register;
-use App\Models\Card;
+use DateTime;
 use Validator, DB;
+use App\Models\Card;
+use App\Models\Register;
+use App\Models\Reservation;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class ReservationController extends Controller
 {
@@ -27,6 +28,7 @@ class ReservationController extends Controller
                         'phone' => 'required|unique:reservations,phone',
                         'email' => 'required|email|unique:reservations,email',
                         'card_number' => 'required|max:8',
+                        'card_id' => 'required|integer',
                         'date' => 'required|date',
                     ];
 
@@ -41,8 +43,9 @@ class ReservationController extends Controller
                         $phone       = $request->phone;
                         $email       = $request->email;
                         $card_number = $request->card_number;
+                        $card_id     = $request->card_id;
                         $date        = $request->date;
-                        if (Register::where('email', $email)->where('phone', $phone)->where('card_number', $card_number)->exists())
+                        if (Register::where('email', $email)->where('phone', $phone)->where('card_number', $card_number)->where('card_id', $card_id)->exists())
                         {
 
                             $reserve = new Reservation;
@@ -50,6 +53,7 @@ class ReservationController extends Controller
                             $reserve->phone       = $phone;
                             $reserve->email       = $email;
                             $reserve->card_number = $card_number;
+                            $reserve->card_id     = $card_id;
                             $reserve->date        = $date;
                             $reserve->save();
 
@@ -69,14 +73,40 @@ class ReservationController extends Controller
 
     }
 
-    public function reserved_dates()
+    public function reserved_dates(Request $request)
     {
+        $card_id = $request->card_id;
         $data = array();
 
-        $dates = Reservation::where('confirm', 1)->select(['date'])->get();
+        $earlier = new DateTime();
+        $later = new DateTime("2022-06-02");
+        $pos_diff = $earlier->diff($later)->format("%r%a");
+        $possible_count = 1;
 
-        foreach ($dates as $d) {
-            array_push($data, $d->date);
+        if ($card_id == 1) {
+            $possible_count == 19;
+        }
+        elseif ($card_id == 2) {
+            $possible_count == 6;
+        }
+        elseif ($card_id == 3) {
+            $possible_count == 4;
+        }
+        elseif ($card_id == 4) {
+            $possible_count == 5;
+        }
+
+        for ($i=0; $i < $pos_diff; $i++) {
+
+            $date = $earlier->format('Y-m-d');
+            $actual_count = Reservation::where('confirm', 1)->where('date', $date)->where('card_id', $card_id)->count();
+            if ($actual_count >= $possible_count)
+            {
+                array_push($data, $date);
+            }
+            $earlier = $earlier->modify('+1 day');
+
+
         }
 
         return response()->json($data);

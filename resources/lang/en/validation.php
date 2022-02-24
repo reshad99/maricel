@@ -161,7 +161,8 @@ return [
         'email' => 'Email',
         'phone' => 'Phone',
         'message' => 'Message',
-        'card_id' => 'Card Type',   
+        'card_id' => 'Card Type',
+        'card_number' => 'Card Number',
     ],
 
 ];

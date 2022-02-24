@@ -21,8 +21,8 @@
         </svg>
     </button>
 </div> -->
-<!--UPDOWN SECTION========================-->  
-<!--SCRIPTS SECTION========================-->   
+<!--UPDOWN SECTION========================-->
+<!--SCRIPTS SECTION========================-->
 
 <script type="text/javascript" src="js/plugins/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -38,29 +38,35 @@
 <script src="js/plugins/calendar.js"></script>
 <!-- JavaScript Alertify -->
 <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
-<!--MAIN JS========================-->   
+<!--MAIN JS========================-->
 <script type="text/javascript" src="js/main.js"></script>
 
 
 <script>
-    
-    $( function() {
 
-        var unavailableDates
+    $(function() {
 
-        $.ajax({
+        var unavailableDates;
+
+        $('#card_id_reservation').change(function(){
+            card_id = $(this).val();
+            $.ajax({
             url: '/reserved-dates',
-            type: 'get',
+            type: 'post',
+            data: {card_id:card_id},
+            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
             dataType: 'json',
             success: function(data){
-                unavailableDates = data;
+                 unavailableDates = data;
             }
-        });
-      $( "#datepicker" ).datepicker({ 
-          minDate: 0, 
-          maxDate: "2022-05-31", 
+        })
+        })
+
+      $( "#datepicker" ).datepicker({
+          minDate: 0,
+          maxDate: "2022-05-31",
           dateFormat: "yy-mm-dd",
-          changeMonth: true, 
+          changeMonth: true,
           changeYear: true,
           beforeShowDay:function(d) {
             var year = d.getFullYear(),
@@ -70,13 +76,13 @@
         var formatted = year + '-' + month + '-' + day;
 
         if ($.inArray(formatted, unavailableDates) != -1) {
-            return [false,"","unAvailable"]; 
+            return [false,"","unAvailable"];
         } else{
-            
-            return [true, "","Available"]; 
+
+            return [true, "","Available"];
         }
-        } 
-    
+        }
+
     });
 
 
@@ -84,9 +90,9 @@
     </script>
 
 <script>
-    
+
     $(function(){
-        
+
         $('.card_image').click(function(){
             var id = $(this).data('id');
             $.ajax({
@@ -143,8 +149,8 @@
                     $('#reserve_form input').prop('disabled', false)
                     $('.error-text').css('display', 'block')
                     $('.error-text').html(data.responseJSON.error)
-            
-                   
+
+
                 }
             })
         })
@@ -196,15 +202,15 @@
                         console.log(data.responseJSON)
                         $('.error-text').css('display', 'block')
                         $('.error-text').html(data.responseJSON.error)
-                        
+
                     }
-                    
+
 
                     if(data.responseJSON.status == 1)
                     {
                         console.log(data)
                     }
-                   
+
                 }
             })
         })

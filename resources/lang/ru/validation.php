@@ -134,11 +134,12 @@ return [
     ],
 
     'attributes' => [
-        'name' => 'Name',
-        'surname' => 'Surname',
-        'email' => 'Email',
-        'phone' => 'Phone',
-        'message' => 'Message',
-        'card_id' => 'Card Type',   
+        'name' => 'Имя',
+        'surname' => 'Фамилия',
+        'email' => 'Эл. адрес',
+        'phone' => 'Телефон',
+        'message' => 'Сообщение',
+        'card_id' => 'Тип карты',
+        'card_number' => 'Номер карты',
     ],
 ];

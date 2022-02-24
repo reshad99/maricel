@@ -9,7 +9,7 @@
     <div class="container-fluid">
         <div class="row" >
             <div class="home_button">
-                <button class="wow animate__animated animate__bounceInDown  animate__fast animate__delay-1s	" type="submit"><a href="/reservation">REZERVASİYA</a></button>
+                <button class="wow animate__animated animate__bounceInDown  animate__fast animate__delay-1s	" type="submit"><a href="/reservation">{{ __('nav.reservation') }}</a></button>
 
                 <ul class="wow animate__animated animate__fadeInUp  animate__fast animate__delay-1s	">
                     <li>

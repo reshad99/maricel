@@ -12,6 +12,7 @@ return [
     'address' => 'Ünvan',
     'phone' => 'Telefon',
     'send' => 'Göndər',
+    'date' => 'Tarix',
 
     'name' => 'Ad',
     'surname' => 'Soyad',
