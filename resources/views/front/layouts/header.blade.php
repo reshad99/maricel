@@ -70,11 +70,11 @@
 
         <div class="linec top left"></div>
         <ul class="menu-items">
-            <li class="nav-item"><a class="nav-link vs-mobile-menu active" href="/">Ana Səhifə</a></li>
-            <li class="nav-item"><a class="nav-link vs-mobile-menu" href="/about">Haqqımızda</a></li>
-            <li class="nav-item"><a class="nav-link vs-mobile-menu" href="/campaign">Kompaniya</a></li>
-            <li class="nav-item"><a class="nav-link vs-mobile-menu" href="/register">Qeydiyyat</a></li>
-            <li class="nav-item"><a class="nav-link vs-mobile-menu" href="/contact">Əlaqə</a></li>
+            <li class="nav-item"><a class="nav-link vs-mobile-menu active" href="/">{{ __('nav.home') }}</a></li>
+            <li class="nav-item"><a class="nav-link vs-mobile-menu" href="/about">{{ __('nav.about') }}</a></li>
+            <li class="nav-item"><a class="nav-link vs-mobile-menu" href="/campaign">{{ __('nav.campaign') }}</a></li>
+            <li class="nav-item"><a class="nav-link vs-mobile-menu" href="/register">{{ __('nav.registration') }}</a></li>
+            <li class="nav-item"><a class="nav-link vs-mobile-menu" href="/contact">{{ __('nav.contact') }}</a></li>
         </ul>
     </div>
 </div>
