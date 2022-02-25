@@ -1142,7 +1142,7 @@ header .header-down .container-fluid .header-right-side .header-menu nav ul li u
 }
 
 .home_bottom.home_bottom-style-4 {
-  height: 93vh;
+  min-height: 100vh;
   padding-bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1161,7 +1161,9 @@ header .header-down .container-fluid .header-right-side .header-menu nav ul li u
   background-size: cover;
   background-position: center center;
 }
+.home_bottom .container-fluid{
 
+}
 .home_bottom .container-fluid .row .bottom_content {
   width: 60%;
   display: -webkit-box;
@@ -1178,17 +1180,18 @@ header .header-down .container-fluid .header-right-side .header-menu nav ul li u
 }
 
 .home_bottom .container-fluid .row .bottom_content h1 {
-  font-size: 142px;
+  font-size: 95px;
   font-family: "Tenor Sans";
   color: #fff;
   font-weight: 400;
 }
 
 .home_bottom .container-fluid .row .bottom_content h2 {
-  font-size: 122px;
+  font-size: 76px;
   font-family: "Futura New";
   color: #fff;
   font-weight: lighter;
+  margin-bottom: 30px;
 }
 
 .home_bottom .container-fluid .row .bottom_content p {
@@ -2106,6 +2109,9 @@ footer .container-fluid .row .fotRight h6 {
   .vs-menu-area {
     max-width: 100%;
   }
+  .home_bottom .container-fluid{
+    padding: 13rem 10px 10rem 10px;
+  }
   .home_bottom .container-fluid .row .bottom_content {
     width: 100%;
   }
@@ -2178,6 +2184,7 @@ footer .container-fluid .row .fotRight h6 {
   }
   .company .container .row .contact_text {
     font-size: 40px;
+    margin-bottom: 0px;
   }
   .company .container .row .image {
     -ms-grid-columns: (1fr)[2];
@@ -2207,6 +2214,7 @@ footer .container-fluid .row .fotRight h6 {
     width: 100%;
     max-width: 100%;
   }
+
 }
 
 @media only screen and (max-width: 565px) {
