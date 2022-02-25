@@ -18,6 +18,7 @@ class CreateContactsTable extends Migration
             $table->string('address_az')->nullable();
             $table->string('address_en')->nullable();
             $table->string('address_ru')->nullable();
+            $table->string('email')->nullable();
             $table->string('instagram')->nullable();
             $table->string('facebook')->nullable();
             $table->string('twitter')->nullable();
