@@ -1060,7 +1060,7 @@ header .header-down .container-fluid .header-right-side .header-menu nav ul li u
 }
 
 .home.home-style-4 {
-  min-height: calc(100vh - 7rem);
+  min-height: calc(100vh - 0rem);
   padding-bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
