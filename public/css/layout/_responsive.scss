@@ -186,7 +186,7 @@ $brekpointmobileScreen565:565px;
                 font-size: 30px;
             }
             .row{
-
+                margin-bottom: 0rem;
                 .res_right{
                     padding: 30px;
                     #calendar {
@@ -194,6 +194,7 @@ $brekpointmobileScreen565:565px;
                     }
                 }
                 .res_left{
+                    margin-bottom: 0px;
                     .card_number{
                         justify-content: center;
                     }
@@ -206,6 +207,12 @@ $brekpointmobileScreen565:565px;
                     }
                 }
 
+            }
+            .res_btn{
+                button{
+                    margin-top: 0rem;
+                    margin-bottom: 10rem;
+                }
             }
         }
     }

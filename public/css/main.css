@@ -1878,12 +1878,6 @@ header .header-down .container-fluid .header-right-side .header-menu nav ul li u
   background: url("/img/company/100azn-45-2.png") no-repeat;
 }
 
-#ui-datepicker-div {
-  border-radius: 7px;
-  width: 400px;
-  border-radius: 7px;
-}
-
 footer {
   height: 70px;
   background-color: #0D3F5C;
@@ -2072,11 +2066,17 @@ footer .container-fluid .row .fotRight h6 {
   .reservation_section .container .contact_text {
     font-size: 30px;
   }
+  .reservation_section .container .row {
+    margin-bottom: 0rem;
+  }
   .reservation_section .container .row .res_right {
     padding: 30px;
   }
   .reservation_section .container .row .res_right #calendar {
     width: 400px;
+  }
+  .reservation_section .container .row .res_left {
+    margin-bottom: 0px;
   }
   .reservation_section .container .row .res_left .card_number {
     -webkit-box-pack: center;
@@ -2098,6 +2098,10 @@ footer .container-fluid .row .fotRight h6 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .reservation_section .container .res_btn button {
+    margin-top: 0rem;
+    margin-bottom: 10rem;
   }
   .vs-menu-area {
     max-width: 100%;
@@ -2239,9 +2243,5 @@ footer .container-fluid .row .fotRight h6 {
   .register .container-fluid .row h3 {
     font-size: 30px;
   }
-}
-
-#datepicker{
-    display: none;
 }
 /*# sourceMappingURL=main.css.map */
