@@ -31,11 +31,8 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
 <script type="text/javascript"src="js/plugins/card-validator.js"></script>
 <script type="text/javascript" src="js/plugins/wow.min.js"></script>
-{{-- <script src="https://npmcdn.com/react@15.3.0/dist/react.min.js"></script>
-<script src="https://npmcdn.com/react-dom@15.3.0/dist/react-dom.min.js"></script> --}}
 <script type="text/javascript" src="js/moment-with-locales.min.js"></script>
 <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
-<script src="js/plugins/calendar.js"></script>
 <!-- JavaScript Alertify -->
 <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
 <!--MAIN JS========================-->

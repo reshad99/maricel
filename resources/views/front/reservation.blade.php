@@ -42,7 +42,7 @@
 
             </div>
             <div class="res_btn">
-                <button class="wow animate__animated animate__fadeInUp animate__slow submit_reserve" type="submit"><a>GÖNDƏR</a></button>
+                <button class="submit_reserve" type="submit"><a>GÖNDƏR</a></button>
             </form>
         </div>
 
