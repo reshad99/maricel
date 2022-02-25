@@ -1060,7 +1060,7 @@ header .header-down .container-fluid .header-right-side .header-menu nav ul li u
 }
 
 .home.home-style-4 {
-  height: 100vh;
+  min-height: calc(100vh - 7rem);
   padding-bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1142,7 +1142,7 @@ header .header-down .container-fluid .header-right-side .header-menu nav ul li u
 }
 
 .home_bottom.home_bottom-style-4 {
-  min-height: 100vh;
+  min-height: calc(100vh - 7rem);
   padding-bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1209,7 +1209,7 @@ header .header-down .container-fluid .header-right-side .header-menu nav ul li u
 }
 
 .contact.contact-style-4 {
-  height: 93vh;
+  min-height: calc(100vh - 7rem);
   padding-bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1290,7 +1290,7 @@ header .header-down .container-fluid .header-right-side .header-menu nav ul li u
 }
 
 .company.company-style-4 {
-  min-height: 93vh;
+  min-height: calc(100vh - 7rem);
   padding-bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1372,7 +1372,7 @@ header .header-down .container-fluid .header-right-side .header-menu nav ul li u
 }
 
 .register.register-style-4 {
-  height: 93vh;
+  min-height: calc(100vh - 7rem);
   padding-bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1553,7 +1553,9 @@ header .header-down .container-fluid .header-right-side .header-menu nav ul li u
   min-height: calc(100vh - 7rem);
   position: relative;
 }
-
+.reservation_section #datepicker{
+    display: none;
+}
 .reservation_section .container {
   padding: 14rem 0px 0px 0px;
 }
@@ -2171,8 +2173,10 @@ footer .container-fluid .row .fotRight h6 {
     padding: 0px 20px;
   }
   .contact .container-fluid .row .contact_center .loc, .contact .container-fluid .row .contact_center .num, .contact .container-fluid .row .contact_center .mail {
-    height: 50px;
+    height: 60px;
+    padding: 17px;
   }
+
   .contact .container-fluid .row .map {
     margin-bottom: 10rem;
   }

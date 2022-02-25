@@ -54,7 +54,7 @@ $(function() {
                 $('.card_info').html(data.text);
             },
             error: function(data){
-                console.log(data);
+                // console.log(data);
             }
         })
     })
