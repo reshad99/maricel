@@ -61,7 +61,7 @@ class ReservationController extends Controller
 
                             $card_name = $reserve->card->name_az;
 
-                            Mail::to('hello@maricel.az')->send(new ReserveMail($name, $email, $phone, $card_number, $card_name));
+                            Mail::to('residence@maricel.az')->send(new ReserveMail($name, $email, $phone, $card_number, $card_name));
 
                             return response()->json(['message' => 'Sorğunuz qəbul olundu. Təsdiq mesajı qısa müddət ərzində email-inizə göndəriləcək.'], 200);
                         }
