@@ -51,15 +51,9 @@ class RegisterController extends Controller
                     $register->save();
 
                     $card_name = $register->card->name_az;
-<<<<<<< HEAD
-        
+    
                     Mail::to("residence@maricel.az")->send(new RegisterMail($name, $phone, $email, $card_name));
                     return response()->json(['message' => 'Sorğunuz təsdiq olundu. Sizinlə qısa müddətdə əlaqə saxlanılacaq.'], 200); 
-=======
-
-                    Mail::to("hello@maricel.az")->send(new RegisterMail($name, $phone, $email, $card_name));
-                    return response()->json(['message' => 'Sorğunuz təsdiq olundu. Sizinlə qısa müddətdə əlaqə saxlanılacaq.'], 200);
->>>>>>> 0c5950604d4077705822825a84861f376a4fa836
                 }
 
             }
