@@ -40,7 +40,7 @@ class ContactController extends Controller
         $phone = $request->phone;
         $message = $request->message;
 
-        Mail::to("info@akiab.az")->send(new ContactMail($name, $surname, $email, $phone, $message));
+        Mail::to("residence@maricel.az")->send(new ContactMail($name, $surname, $email, $phone, $message));
         return redirect()->back()->with('success', 'Mesajınız uğurla göndərildi');
     }
 }

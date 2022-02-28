@@ -52,7 +52,7 @@ class RegisterController extends Controller
         
                     $card_name = $register->card->name_az;
         
-                    Mail::to("hello@maricel.az")->send(new RegisterMail($name, $phone, $email, $card_name));
+                    Mail::to("residence@maricel.az")->send(new RegisterMail($name, $phone, $email, $card_name));
                     return response()->json(['message' => 'Sorğunuz təsdiq olundu. Sizinlə qısa müddətdə əlaqə saxlanılacaq.'], 200); 
                 }
                  
