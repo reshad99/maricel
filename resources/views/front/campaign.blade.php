@@ -24,13 +24,13 @@
 
             @if (app()->getLocale() == 'az')
             <h3 class="contact_text c5 wow animate__animated animate__fadeInUp card_name" data-wow-delay="1s">{{$c->name_az}}</h3>
-            <p class="wow animate__animated animate__fadeInUp card_info" data-wow-delay="1s">{{$c->text_az}}</p>
+            <p class="wow animate__animated animate__fadeInUp card_info" data-wow-delay="1s">{!!$c->text_az!!}</p>
             @elseif (app()->getLocale() == 'ru')
             <h3 class="contact_text c5 wow animate__animated animate__fadeInUp" data-wow-delay="1s">{{$c->name_ru}}</h3>
-            <p class="wow animate__animated animate__fadeInUp" data-wow-delay="1s">{{$c->text_ru}}</p>
+            <p class="wow animate__animated animate__fadeInUp" data-wow-delay="1s">{!!$c->text_ru!!}</p>
             @elseif (app()->getLocale() == 'en')
             <h3 class="contact_text c5 wow animate__animated animate__fadeInUp" data-wow-delay="1s">{{$c->name_en}}</h3>
-            <p class="wow animate__animated animate__fadeInUp" data-wow-delay="1s">{{$c->text_en}}</p>
+            <p class="wow animate__animated animate__fadeInUp" data-wow-delay="1s">{!!$c->text_en!!}</p>
             @endif
 
             @endif
