@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="tr" >
+<html lang="tr" style="overflow: auto">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,15 +8,6 @@
     <title>MARICEL</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <!-- CSS Alertify -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
-
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
-    <!-- Default theme -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
-    <!-- Semantic UI theme -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css"/>
-    <!-- Bootstrap theme -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
 </head>
 <body>
 
@@ -42,8 +33,8 @@
             <nav class="header_nav">
                 <div class="header-left">
                     <ul class="header-menu">
-                        <li><a href="/about">Haqqımızda</a></li>
-                        <li><a href="/campaign">Kampaniya</a></li>
+                        <li><a href="/about">{{ __('nav.about') }}</a></li>
+                        <li><a href="/campaign">{{ __('nav.campaign') }}</a></li>
                     </ul>
                 </div>
                 <a href="/" class="header_logo">
@@ -51,8 +42,8 @@
                 </a>
                 <div class="header-right">
                     <ul class="header-menu">
-                        <li><a href="/register">Qeydiyyat</a></li>
-                        <li><a href="/contact">Əlaqə</a></li>
+                        <li><a href="/register">{{ __('nav.registration') }}</a></li>
+                        <li><a href="/contact">{{ __('nav.contact') }}</a></li>
                     </ul>
                 </div>
                 <div class="mobileMenu">
@@ -70,11 +61,11 @@
 
         <div class="linec top left"></div>
         <ul class="menu-items">
-            <li class="nav-item"><a class="nav-link vs-mobile-menu active" href="/">Ana Səhifə</a></li>
-            <li class="nav-item"><a class="nav-link vs-mobile-menu" href="/about">Haqqımızda</a></li>
-            <li class="nav-item"><a class="nav-link vs-mobile-menu" href="/campaign">Kompaniya</a></li>
-            <li class="nav-item"><a class="nav-link vs-mobile-menu" href="/register">Qeydiyyat</a></li>
-            <li class="nav-item"><a class="nav-link vs-mobile-menu" href="/contact">Əlaqə</a></li>
+            <li class="nav-item"><a class="nav-link vs-mobile-menu active" href="/">{{ __('nav.home') }}</a></li>
+            <li class="nav-item"><a class="nav-link vs-mobile-menu" href="/about">{{ __('nav.about') }}</a></li>
+            <li class="nav-item"><a class="nav-link vs-mobile-menu" href="/campaign">{{ __('nav.campaign') }}</a></li>
+            <li class="nav-item"><a class="nav-link vs-mobile-menu" href="/register">{{ __('nav.registration') }}</a></li>
+            <li class="nav-item"><a class="nav-link vs-mobile-menu" href="/contact">{{ __('nav.contact') }}</a></li>
         </ul>
     </div>
 </div>

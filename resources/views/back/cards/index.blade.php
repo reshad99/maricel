@@ -1,6 +1,6 @@
 @extends('back.layouts.master')
 
-@section('title', 'Əlaqə')
+@section('title', 'Kartlar')
 @section('content')
 
 <div class="container-fluid">
@@ -28,7 +28,7 @@
                   <td>{{$c->name_en}}</td>
                   <td>{{$c->name_ru}}</td>
                   <td><a href="/admin/cards/edit/{{$c->id}}" class="btn btn-success">Edit</a></td>
-                </tr> 
+                </tr>
                 @endforeach
               </tbody>
             </table>
@@ -42,7 +42,7 @@
     <!-- /.row -->
   </div>
 
-    
+
 @endsection
 
 

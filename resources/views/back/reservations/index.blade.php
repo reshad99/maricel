@@ -1,7 +1,34 @@
 @extends('back.layouts.master')
 
-@section('title', 'Əlaqə')
+@section('title', 'Rezerv edənlər')
 @section('content')
+
+<style>
+    .loader2 {
+        display: none;
+        margin: auto;
+      border: 16px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 16px solid #3498db;
+      width: 120px;
+      height: 120px;
+      -webkit-animation: spin 2s linear infinite; /* Safari */
+      animation: spin 2s linear infinite;
+    }
+
+    /* Safari */
+    @-webkit-keyframes spin {
+      0% { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    </style>
+
+
 
 <div class="container-fluid">
     <div class="row">
@@ -32,19 +59,19 @@
                   <td>{{$r->phone}}</td>
                   <td>{{$r->card_number}}</td>
                   <td>
-                    @if (isset($r->card->card->name_az))
-                    {{$r->card->card->name_az}}
+                    @if (!isset($r->card_check->card->name_az))
+                    <div class="alert alert-danger">Müştərinin daxil etdiyi nömrə sizin verdiyiniz nömrə ilə eyni deyil</div>
                     @else
-                    <div class="alert alert-danger">Müştərinin daxil etdiyi nömrə sizin verdiyiniz nömrə ilə eyni deyil</div> 
+                    {{ $r->card->name_az }}
                     @endif
-                    
+
                   </td>
                   <td>{{$r->date}}</td>
                   <td id="id-{{$r->id}}">@if ($r->confirm == 0)
                     <button type="button" data-id="{{$r->id}}" data-num="1" class="btn btn-success check">
                       <i class="fa fa-fw fa-check"></i>
                     </button>
-                    @else 
+                    @else
                     <button type="button" data-id="{{$r->id}}" data-num="0" class="btn btn-danger check">
                       <i class="fa fa-fw fa-close"></i>
                     </button>
@@ -53,12 +80,13 @@
                     <i class="fa fa-fw fa-trash"></i>
                   </button>
                     </td>
-                </tr> 
+                </tr>
                 @endforeach
               </tbody>
             </table>
           </div>
           <!-- /.card-body -->
+          <div class="loader2"></div>
         </div>
         <!-- /.card -->
       </div>
@@ -69,7 +97,7 @@
 
   <!-- Button trigger modal -->
 
-    
+
 @endsection
 
 
@@ -110,7 +138,7 @@
       num = $(this).data('num');
       id = $(this).data('id');
 
-      if (num == 1) 
+      if (num == 1)
       {
         message = "Rezervi təsdiq etmək istədiyinizə əminsiniz?";
       }
@@ -126,8 +154,22 @@
         type: 'post',
         data: {id:id, num:num},
         headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+        beforeSend: function(){
+            $('.loader2').fadeIn()
+            $('.card-body').css('display', 'none')
+            $('.card').css('background', 'none')
+            $('.card').css('box-shadow', 'none')
+
+        },
         success: function(data)
         {
+            $('.loader2').fadeOut()
+            setTimeout(function(){
+                $('.card-body').css('display', 'block');
+                $('.card').css('background', '')
+                $('.card').css('box-shadow', '')
+            },1000);
+
           if(data == 1)
           {
             alertify.success('Rezerv təsdiq olundu');
@@ -148,7 +190,7 @@
                     <i class="fa fa-fw fa-trash"></i>
                   </button>`);
           }
-          
+
         },
         error: function(data)
         {
@@ -162,17 +204,17 @@
         alertify.error('Əməliyyat ləğv edildi');
       }).set({title:"Təsdiq"}).set({labels:{ok:'Bəli', cancel: 'Xeyr'}});
 
-      
 
-      
 
-      
+
+
+
     })
   });
 
   $(document).on('click', '.delete', function(){
         id = $(this).data('id');
-        alertify.confirm("Silmək istədiyinizə əminsiniz?", 
+        alertify.confirm("Silmək istədiyinizə əminsiniz?",
         function(){
           $.ajax({
             url: '/admin/reserve/delete',

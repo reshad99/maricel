@@ -12,6 +12,8 @@ return [
     'address' => 'Address',
     'phone' => 'Phone',
     'send' => 'Send',
+    'date' => 'Date',
+    'rights' => 'All rights reserved',
 
     'name' => 'Name',
     'surname' => 'Surname',

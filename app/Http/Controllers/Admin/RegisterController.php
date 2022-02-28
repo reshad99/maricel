@@ -28,7 +28,6 @@ class RegisterController extends Controller
             $register->update();
 
             $name = $register->name;
-            $surname = $register->surname;
             $email = $register->email;
             $phone = $register->phone;
             $card_name = $register->card->name_az;
@@ -36,9 +35,9 @@ class RegisterController extends Controller
 
             return $register;
         } catch (\Exception $e) {
-            return $e;
+            return $e->getMessage();
         }
-            
+
     }
 
     public function destroy(Request $request)

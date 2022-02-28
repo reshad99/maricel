@@ -18,9 +18,10 @@ class CreateReservationsTable extends Migration
             $table->string('name', 100);
             $table->string('phone', 100);
             $table->string('email', 100);
-            $table->string('card_number', 10);
+            $table->string('card_number', 10)->nullable();
+            $table->integer('card_id');
             $table->date('date');
-            $table->tinyInteger('confirm')->value(0);
+            $table->tinyInteger('confirm')->default(0);
             $table->timestamps();
         });
     }

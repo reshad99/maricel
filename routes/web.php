@@ -8,16 +8,16 @@ Route::prefix('admin')->middleware('isLogout')->group(function () {
     Route::get('/', 'App\Http\Controllers\Admin\DashboardController@index');
     Route::get('logout', 'App\Http\Controllers\Admin\LoginController@logout');
     Route::get('dashboard', 'App\Http\Controllers\Admin\DashboardController@index');
-    
-    
-    Route::get('about', 'App\Http\Controllers\Admin\AboutController@index');    
-    Route::get('about/edit', 'App\Http\Controllers\Admin\AboutController@edit');    
+
+
+    Route::get('about', 'App\Http\Controllers\Admin\AboutController@index');
+    Route::get('about/edit', 'App\Http\Controllers\Admin\AboutController@edit');
     Route::post('about/edit', 'App\Http\Controllers\Admin\AboutController@post_edit');
 
     Route::get('registers', 'App\Http\Controllers\Admin\RegisterController@index');
     Route::post('register/card-number', 'App\Http\Controllers\Admin\RegisterController@post_card_number');
     Route::post('register/delete', 'App\Http\Controllers\Admin\RegisterController@destroy');
-    
+
     Route::get('reservations', 'App\Http\Controllers\Admin\ReserveController@index');
     Route::post('reserve/check', 'App\Http\Controllers\Admin\ReserveController@check');
     Route::post('reserve/delete', 'App\Http\Controllers\Admin\ReserveController@destroy');
@@ -38,7 +38,7 @@ Route::prefix('admin')->middleware('isLogout')->group(function () {
 Route::prefix('admin')->middleware('isLogin')->group(function () {
     Route::get('login', 'App\Http\Controllers\Admin\LoginController@index');
     Route::post('login', 'App\Http\Controllers\Admin\LoginController@post');
-   
+
 });
 
 
@@ -53,7 +53,7 @@ Route::get('/register', "App\Http\Controllers\Front\RegisterController@index");
 Route::post('/register/submit', "App\Http\Controllers\Front\RegisterController@post");
 Route::post('/reserve/submit', "App\Http\Controllers\Front\ReservationController@post");
 Route::get('/reservation', "App\Http\Controllers\Front\ReservationController@index");
-Route::get('/reserved-dates', "App\Http\Controllers\Front\ReservationController@reserved_dates");
+Route::post('/reserved-dates', "App\Http\Controllers\Front\ReservationController@reserved_dates");
 Route::get('/campaign', "App\Http\Controllers\Front\CampaignController@index");
 Route::get('/contact', "App\Http\Controllers\Front\ContactController@index");
 Route::post('/contact', "App\Http\Controllers\Front\ContactController@post");

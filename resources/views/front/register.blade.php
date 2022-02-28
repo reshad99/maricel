@@ -6,17 +6,17 @@
 <section class="register register-style-4 bg_image bg_image--12">
     <div class="container-fluid">
         <div class="row">
-            <h3 >Qeydiyyat</h3>
-            <div class="res_left col-md-12">
+            <h3 >{{ __('nav.registration') }}</h3>
+            <div class="res_left col-lg-6 col-md-12">
                 <form id="register_form" class="form_report" action="javascript:void(0)" method="POST">
-                    <input type="text" placeholder="Ad, Soyad" name="name">
-                    <input type="text" placeholder="Nömrəniz" name="phone">
+                    <input type="text" placeholder="{{ __('home.name') }}, {{ __('home.surname') }}" name="name">
+                    <input type="text" placeholder="{{ __('home.phone') }}" name="phone">
                     <div class="inputBox">
-                        <input type="text" class="indicator" id="email" name="email" onkeyup="validate();" placeholder="E-mail">
+                        <input type="text" class="indicator" id="email" name="email" onkeyup="validate();" placeholder="{{ __('home.email') }}">
                     </div>
                     <span class="indicator"></span>
                     <select name="card_id">
-                        <option value="">Kart növü</option>
+                        <option value="">{{ __('validation.attributes.card_id') }}</option>
                         @foreach ($cards as $c)
                         @if (app()->getLocale() == 'az')
                         <option value="{{$c->id}}">{{$c->name_az}}</option>
@@ -31,7 +31,7 @@
             </div>
         </div>
         <div class="res_btn col-md-4">
-            <button type="submit" class="submit_register"><a >GÖNDƏR</a></button>
+            <button type="submit" class="submit_register"><a >{{ __('home.send') }}</a></button>
         </div>
     </form>
     </div>

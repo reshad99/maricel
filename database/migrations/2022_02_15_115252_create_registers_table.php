@@ -18,7 +18,7 @@ class CreateRegistersTable extends Migration
             $table->string('name', 100);
             $table->string('phone', 100)->unique();
             $table->string('email', 100)->unique();
-            $table->string('card_number', 8)->unique();
+            $table->string('card_number', 8)->unique()->nullable();
             $table->bigInteger('card_id')->unsigned();
             $table->foreign('card_id')->references('id')->on('cards')->onDelete('cascade');
             $table->timestamps();

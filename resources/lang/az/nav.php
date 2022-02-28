@@ -4,11 +4,13 @@ return [
     'home' => 'Ana səhifə',
     'about' => 'Haqqımızda',
     'action' => 'Fəaliyyət',
-    'mancard' => 'Kişi Kartı',
-    'menclub' => 'Kişilər Klubu',
-    'menleague' => 'Kişilər Liqası',
+    'reservation' => 'Rezervasiya',
+    'reservation2' => 'REZERVASİYA',
+    'registration' => 'Qeydiyyat',
+    'campaign' => 'Kampaniya',
     'partners' => 'Tərəfdaşlar',
     'contact' => 'Əlaqə',
+    'contact2' => 'ƏLAQƏ',
     'register' => 'Qeydiyyat',
     'privacy' => 'Məxfilik Siyasəti'
 ];

@@ -21,7 +21,7 @@ class RegisterController extends Controller
     public function post(Request $request)
     {
         try {
-            
+
             if ($request->ajax()) {
                 $rules = [
                     'name' => 'required',
@@ -29,9 +29,9 @@ class RegisterController extends Controller
                     'email' => 'required|email|unique:registers,email',
                     'card_id' => 'required|numeric|min:1|max:4',
                 ];
-        
+
                 $validator = Validator::make($request->all(), $rules);
-        
+
                 if ($validator->fails()) {
                     return response()->json(['status' => 0, 'error' => $validator->errors()->first()], 400);
                 }
@@ -41,26 +41,32 @@ class RegisterController extends Controller
                     $phone   = $request->phone;
                     $email   = $request->email;
                     $card_id = $request->card_id;
-            
+
                     $register = new Register;
-            
+
                     $register->name = $name;
                     $register->phone = $phone;
                     $register->email = $email;
                     $register->card_id = $card_id;
                     $register->save();
-        
+
                     $card_name = $register->card->name_az;
+<<<<<<< HEAD
         
                     Mail::to("residence@maricel.az")->send(new RegisterMail($name, $phone, $email, $card_name));
                     return response()->json(['message' => 'Sorğunuz təsdiq olundu. Sizinlə qısa müddətdə əlaqə saxlanılacaq.'], 200); 
+=======
+
+                    Mail::to("hello@maricel.az")->send(new RegisterMail($name, $phone, $email, $card_name));
+                    return response()->json(['message' => 'Sorğunuz təsdiq olundu. Sizinlə qısa müddətdə əlaqə saxlanılacaq.'], 200);
+>>>>>>> 0c5950604d4077705822825a84861f376a4fa836
                 }
-                 
+
             }
-            
+
 
         } catch (\Exception $e) {
-            return response()->json(['status' => 1, 'error' => $e->getMessage()]);
+            return response()->json(['error' => $e->getMessage()]);
         }
 
     }
