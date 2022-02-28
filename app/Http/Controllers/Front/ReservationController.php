@@ -112,7 +112,6 @@ class ReservationController extends Controller
             }
             $earlier = $earlier->modify('+1 day');
 
-
         }
 
         return response()->json($data);
